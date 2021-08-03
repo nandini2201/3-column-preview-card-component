@@ -1,0 +1,133 @@
+:root {
+  --orange: hsl(31, 77%, 52%);
+  --cyan: hsl(184, 100%, 22%);
+  --dark-cyan: hsl(179, 100%, 13%);
+
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.5rem;
+  font-family: "Lexend Deca", sans-serif;
+  background-color: var(--light-gray);
+  line-height: 1.7;
+}
+.container {
+  animation: moveInBottom 1s;
+  max-width: 85vw;
+  margin: 5rem auto;
+}
+@keyframes moveInBottom {
+  0% {
+    transform: translateY(6rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+.card {
+  color: var(--transparent-white);
+  padding: 4rem;
+}
+.left {
+  background-color: var(--orange);
+  border-radius: 1rem 1rem 0 0;
+}
+.middle {
+  background-color: var(--cyan);
+}
+.right {
+  background-color: var(--dark-cyan);
+  border-radius: 0 0 1rem 1rem;
+}
+h3 {
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display";
+  font-weight: 700;
+  font-size: 3.5rem;
+  color: var(--light-gray);
+  margin-bottom: 1.5rem;
+}
+p {
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+button {
+  background-color: var(--light-gray);
+  color: var(--orange);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
+  font-family: "Lexend Deca", sans-serif;
+}
+button:hover {
+  color: var(--light-gray);
+  border: 2px solid var(--light-gray);
+  background: transparent;
+}
+.orange {
+  color: var(--orange);
+}
+.cyan {
+  color: var(--cyan);
+}
+.dark-cyan {
+  color: var(--dark-cyan);
+}
+img {
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 730px) {
+  .container {
+    margin: 0 auto;
+    max-width: 900px;
+  }
+  .cards {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  img {
+    margin-bottom: 2rem;
+  }
+  h3 {
+    margin-bottom: 2rem;
+  }
+  p {
+    margin-bottom: 6rem;
+  }
+  button {
+    display: inline-block;
+    padding: 1.5rem 3rem;
+  }
+
+  .card {
+    padding: 4rem;
+    flex: 1;
+  }
+  .left {
+    border-radius: 0;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+  }
+  .right {
+    border-radius: 0;
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+}
